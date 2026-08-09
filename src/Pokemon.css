@@ -1,0 +1,17 @@
+* {
+  align-self: center;
+}
+
+.back {
+  font-size: 200%;
+  text-decoration: none;
+  color: black;
+}
+
+.back::before {
+  content: "⬅️";
+}
+
+#Name {
+  align-self: center;
+}
