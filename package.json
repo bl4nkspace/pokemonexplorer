@@ -1,7 +1,6 @@
 {
   "name": "react",
   "version": "1.0.0",
-  "homepage": "https://bl4nkspace.github.io/pokemonexplorer",
   "description": "",
   "keywords": [
     "react",
@@ -19,6 +18,7 @@
   "devDependencies": {
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0",
+    "ajv": "^8.20.0",
     "gh-pages": "^6.3.0",
     "loader-utils": "3.2.1",
     "typescript": "5.7.2"
@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "browserslist": [
@@ -36,5 +36,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "homepage": "https://bl4nkspace.github.io/pokemonexplorer"
 }

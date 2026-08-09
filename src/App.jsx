@@ -73,7 +73,7 @@ const App = () => {
         onChange={handleText}
       />
       <br />
-      <BrowserRouter>
+      <BrowserRouter basename="/pokemonexplorer">
         <PagesList names={names} />
       </BrowserRouter>
     </>
