@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import Pokemon from "./Pokemon";
 import "./App.css";
 
@@ -73,9 +73,9 @@ const App = () => {
         onChange={handleText}
       />
       <br />
-      <BrowserRouter basename="/pokemonexplorer">
+      <HashRouter basename="/pokemonexplorer">
         <PagesList names={names} />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
