@@ -59,39 +59,41 @@ function Pokemon({ name }) {
         Back
       </Link>
       <br />
-      <h1 id="name">{pokemonData.name}</h1>
-      <div className="images info">
-        <div style={{float: "left"}}>
-          Default:
-          <br />
-          <img
-            src={pokemonData.sprites.front_default}
-            alt={`${pokemonData.name} front`}
-          />
-          <img
-            src={pokemonData.sprites.back_default}
-            alt={`${pokemonData.name} back`}
-          />
+      <div className="infoContainer">
+        <h1 id="name">{pokemonData.name}</h1>
+        <div className="images info">
+          <div style={{float: "left"}}>
+            Default:
+            <br />
+            <img
+              src={pokemonData.sprites.front_default}
+              alt={`${pokemonData.name} front`}
+            />
+            <img
+              src={pokemonData.sprites.back_default}
+              alt={`${pokemonData.name} back`}
+            />
+          </div>
+          <div style={{float:"right"}}>
+            Shiny:
+            <br />
+            <img
+              src={pokemonData.sprites.front_shiny}
+              alt={`${pokemonData.name} shiny front`}
+            />
+            <img
+              src={pokemonData.sprites.back_shiny}
+              alt={`${pokemonData.name} shiny back`}
+            />
+          </div>
         </div>
-        <div style={{float:"right"}}>
-          Shiny:
-          <br />
-          <img
-            src={pokemonData.sprites.front_shiny}
-            alt={`${pokemonData.name} shiny front`}
-          />
-          <img
-            src={pokemonData.sprites.back_shiny}
-            alt={`${pokemonData.name} shiny back`}
-          />
-        </div>
+        <p className="info">Id: {pokemonData.id}</p>
+        <p className="info">Order: {pokemonData.order}</p>
+        <p className="info">Weight: {pokemonData.weight}</p>
+        <p className="info">Height: {pokemonData.height}</p>
+        <p className="info">Base Experience: {pokemonData.base_experience}</p>
+        <PokemonStats stats={pokemonData.stats} />{" "}
       </div>
-      <p className="info">Id: {pokemonData.id}</p>
-      <p className="info">Order: {pokemonData.order}</p>
-      <p className="info">Weight: {pokemonData.weight}</p>
-      <p className="info">Height: {pokemonData.height}</p>
-      <p className="info">Base Experience: {pokemonData.base_experience}</p>
-      <PokemonStats stats={pokemonData.stats} />{" "}
       {/* Passage des données de stats */}
     </div>
   );
