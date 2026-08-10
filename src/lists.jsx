@@ -30,4 +30,5 @@ const List = ({ names }) => {
     );
   };
 
-export default routesList, linksList
+export default routesList;
+export default linksList;

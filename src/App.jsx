@@ -73,7 +73,7 @@ const App = () => {
         onChange={handleText}
       />
       <br />
-      <HashRouter basename="/pokemonexplorer">
+      <HashRouter>
         <PagesList names={names} />
       </HashRouter>
     </>
