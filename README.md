@@ -1,2 +1,0 @@
-# pokemonexplorer
-Created with CodeSandbox
