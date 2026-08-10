@@ -10,10 +10,19 @@
     <link rel="manifest" href="https://bl4nkspace.github.io/pokemonexplorer/manifest.json" />
     <link rel="shortcut icon" href="https://bl4nkspace.github.io/pokemonexplorer/favicon.png" />
     <title>Pokémon Explorer</title>
+    <script>import { ring } from 'ldrs'; ring.register();</script>
   </head>
 
   <body>
     <noscript> You need to enable JavaScript to run this webite. </noscript>
-    <div id="root">chargement...</div>
+    <div id="root">
+      <l-ring
+        size="300"
+        stroke="20"
+        bg-opacity="0.1"
+        speed="2.7" 
+        color="black" 
+      ></l-ring>
+    </div>
   </body>
 </html>

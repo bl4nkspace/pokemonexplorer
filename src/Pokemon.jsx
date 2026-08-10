@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Pokemon.css";
+import { Ring } from 'ldrs/react';
+import 'ldrs/react/Ring.css';
 
 function Pokemon({ name }) {
   const [pokemonData, setPokemonData] = useState(null);
@@ -25,12 +27,20 @@ function Pokemon({ name }) {
   }, [name]); // Ajout de 'name' comme dépendance
 
   if (loading) {
-    return <div>loading...</div>;
+    return (
+      <Ring 
+        size="300" 
+        stroke="20" 
+        bgOpacity="0.1" 
+        speed="2.7" 
+        color="black" 
+      />
+    );
   }
 
   const PokemonStats = ({ stats }) => {
     return stats.map((stat) => (
-      <div key={stat.stat.name}>
+      <div  className="info" key={stat.stat.name}>
         <p>
           {stat.stat.name}:
           <ul>
@@ -50,8 +60,8 @@ function Pokemon({ name }) {
       </Link>
       <br />
       <h1 id="name">{pokemonData.name}</h1>
-      <div className="images">
-        <p>
+      <div className="images info">
+        <div style={{float: "left"}}>
           Default:
           <br />
           <img
@@ -62,8 +72,8 @@ function Pokemon({ name }) {
             src={pokemonData.sprites.back_default}
             alt={`${pokemonData.name} back`}
           />
-        </p>
-        <p>
+        </div>
+        <div style={{float:"right"}}>
           Shiny:
           <br />
           <img
@@ -74,13 +84,13 @@ function Pokemon({ name }) {
             src={pokemonData.sprites.back_shiny}
             alt={`${pokemonData.name} shiny back`}
           />
-        </p>
+        </div>
       </div>
-      <p>Id: {pokemonData.id}</p>
-      <p>Order: {pokemonData.order}</p>
-      <p>Weight: {pokemonData.weight}</p>
-      <p>Height: {pokemonData.height}</p>
-      <p>Base Experience: {pokemonData.base_experience}</p>
+      <p className="info">Id: {pokemonData.id}</p>
+      <p className="info">Order: {pokemonData.order}</p>
+      <p className="info">Weight: {pokemonData.weight}</p>
+      <p className="info">Height: {pokemonData.height}</p>
+      <p className="info">Base Experience: {pokemonData.base_experience}</p>
       <PokemonStats stats={pokemonData.stats} />{" "}
       {/* Passage des données de stats */}
     </div>
